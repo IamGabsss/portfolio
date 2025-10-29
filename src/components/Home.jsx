@@ -10,7 +10,7 @@ const Home = () => {
   };
 
   const handleFacebookClick = () => {
-    window.open('https://facebook.com/your-facebook-profile', '_blank');
+    window.open('https://facebook.com/revenjoe.gabasa', '_blank');
   };
 
   const handleContactClick = () => {
