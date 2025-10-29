@@ -1,0 +1,92 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    /* Light Mode - Blue Dominant */
+    --background: 0 0% 100%;
+    --foreground: 215 50% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 50% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 20%;
+    --primary: 215 80% 60%;        /* #4272FF */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 185 100% 63%;     /* #42EAFF */
+    --secondary-foreground: 215 50% 20%;
+    --accent: 25 100% 50%;         /* #FF7B42 - Orange accent */
+    --accent-foreground: 0 0% 100%;
+    --muted: 215 30% 96%;
+    --muted-foreground: 215 20% 45%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 80% 60% / 0.2;
+    --input: 215 80% 60% / 0.1;
+    --ring: 215 80% 60%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    /* Dark Mode - Orange Accent Dominant */
+    --background: 215 50% 8%;      /* Very dark blue background */
+    --foreground: 0 0% 98%;        /* Light text */
+    --card: 215 50% 12%;          /* Dark blue cards */
+    --card-foreground: 0 0% 98%;
+    --popover: 215 50% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 25 100% 50%;        /* #FF7B42 - Orange becomes primary in dark */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 80% 60%;      /* #4272FF - Blue becomes secondary */
+    --secondary-foreground: 0 0% 100%;
+    --accent: 185 100% 63%;        /* #42EAFF - Light blue as accent */
+    --accent-foreground: 215 50% 20%;
+    --muted: 215 40% 20%;
+    --muted-foreground: 215 20% 70%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 25 100% 50% / 0.3;   /* Orange borders */
+    --input: 25 100% 50% / 0.1;    /* Orange input focus */
+    --ring: 25 100% 50%;           /* Orange ring */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom gradients */
+.blue-gradient {
+  background: linear-gradient(135deg, #42EAFF 0%, #4272FF 100%);
+}
+
+.orange-gradient {
+  background: linear-gradient(135deg, #FFB342 0%, #FF7B42 100%);
+}
+
+.blue-orange-gradient {
+  background: linear-gradient(135deg, #4272FF 0%, #FF7B42 100%);
+}
+
+.dark-gradient {
+  background: linear-gradient(135deg, #1a1f3c 0%, #0f1429 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #42EAFF 0%, #4272FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #FFB342 0%, #FF7B42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
