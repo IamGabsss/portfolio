@@ -15,7 +15,7 @@ const About = () => {
     {
       category: "Senior High School",
       icon: <Book className="w-6 h-6" />,
-      items: ["Las Piñas City National Senior High School", "ICT - Programming", "2018 - 2020"]
+      items: ["Philippine Merchant Marine School", "STEM", "2018 - 2020"]
     },
     {
       category: "High School",
